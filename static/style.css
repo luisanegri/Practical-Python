@@ -1,5 +1,22 @@
-.title_riddle {
+.title-riddle {
     text-align: center;
     
-    
+}
+
+body {
+    font-family: audiowide;
+}
+
+.riddle_index {
+    text-align: center;
+    margin-top: 74px;
+    margin-bottom: 50px;
+}
+
+.result {
+    text-align: center;
+}
+
+.form-inline {
+    text-align: center;
 }
