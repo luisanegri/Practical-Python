@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Riddle Game</title>
+</head>
+<body>
+    <div class="main">
+            <div class="container">
+                <a href="/ ">
+                    <h1 class="title_riddle"> Riddle Game </h1>
+                </a>
+                <h2 class="username"> Welcome, {{username}} </h2>
+                <div class="data">
+                    <!--QUESTION-->
+                    <h3 class="riddle"> {{data[i]["question"]}} </h3>
+                </div>
+                    <!--ANSWER-->
+                <div class="col-md-4 answer-riddle">
+                    <form method="POST" class="form-inline">
+                        <input type="text" class="form-control" placeholder="answer" name="message" id="message" autofocus>
+                        <input type="hidden" name="index" id="index" value= {{i}}>
+                        <button class="btn btn-danger">Send</button>
+                    </form>
+                </div>
+                    <!--RESULT-->
+            <div class="result">
+                <h2>{{ ("You got {0} correct".format(score)) }}</h2>
+            </div>
+                </div>
+                
+            </div>
+</body>
+</html>
