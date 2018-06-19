@@ -26,11 +26,13 @@
                         <input type="text" class="form-control" placeholder="answer" name="response" id="response" autofocus>
                         <input type="hidden" name="riddle_index" id="riddle_index" value= {{riddle_index}}>
                         <button class="btn btn-danger">Send</button>
+                        
                     </form>
                 </div>
                     <!--RESULT-->
             <div class="result">
-                <h2>{{ ("You got {0} correct out of {1}".format(score, total_questions)) }}</h2>
+                <h2 class="display-result" id="user_score">{{ ("You got {0} correct out of {1}".format(score, total_questions)) }}</h2>
+                
             </div>
                 </div>
                 
