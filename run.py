@@ -15,34 +15,34 @@ riddle_index = 0
 # Dictionary with user and its score
 user_data ={}
 
-
+# Function to append to file
 def add_to_file (filename, data):
     with open (filename, "a") as file:
         file.writelines(data)
 
 
-#store users in users.txt 
+""" Store users in users.txt 
 def add_users (username):
     add_to_file("data/users.txt", "{0}")
-
+"""
 
 def store_user_score(username, score):
-    #dictionary to store username and score
-    #key/value
+    # Dictionary to store username and score
+    # Key/value
     user_data['username'] = username
     user_data['score'] = score
     print(user_data)
  
-    # create file and open it in write mode
+    # Creates file and open it in write mode
     with open('data/usersdata.json','w') as f:
         print(json.dump(user_data, f, indent=2))
     
     
-#GET the username, store it in the users file
+# GET the username, store it in the users file
 @app.route('/', methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-        add_to_file("data/users.txt", request.form["username"] + "\n")
+        add_to_file("data/usersdata.txt", request.form["username"] + "\n")
         return redirect(request.form["username"])
     return render_template("index.html")
 
