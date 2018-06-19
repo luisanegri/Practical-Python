@@ -6,25 +6,21 @@ from flask import Flask, redirect, render_template, request
 app = Flask(__name__)
 
 
-# variable with the Riddles - json file
+# Variable storing the riddles - json file
 data = []
 # Score starting at 0
 score = 0
 # Riddle index starting at 0
 riddle_index = 0 
 # Dictionary with user and its score
-user_data ={}
+user_data = {}
+all_users_data = {}
 
 # Function to append to file
 def add_to_file (filename, data):
     with open (filename, "a") as file:
         file.writelines(data)
 
-
-""" Store users in users.txt 
-def add_users (username):
-    add_to_file("data/users.txt", "{0}")
-"""
 
 def store_user_score(username, score):
     # Dictionary to store username and score
@@ -72,7 +68,7 @@ def user_game(username):
             # Go to next question
             riddle_index += 1
         else:
-            print("That's incorrect!")
+            print("wrong")
     
     
     if request.method == "POST":
