@@ -46,7 +46,6 @@ def user_game(username):
     riddle_index = 0
     # Score starting at 0
     score = user_data.get(username, 0)
-    wrong = ''
     points = ''
     result = ''
 
@@ -78,8 +77,7 @@ def user_game(username):
 
     return render_template("game.html",
                             username=username, data=data, riddle_index=riddle_index,
-                            score=score, total_questions=total_questions, points=points,
-                            wrong=wrong)
+                            score=score, total_questions=total_questions, points=points)
 
 
 
