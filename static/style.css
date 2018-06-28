@@ -45,3 +45,7 @@ body {
 .form-inline {
     text-align: center;
 }
+
+#user_score {
+    padding-top: 10px;
+}

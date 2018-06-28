@@ -17,12 +17,12 @@
                     <input type="text" class="form-control" placeholder="answer" name="response" id="response" autofocus>
                     <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index }}">
                     <button class="btn btn-danger">Send</button>
-                    
-                    <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index + 1 }}">
-                    <button class="btn btn-danger">Skip question</button>
-                
                 </form>
                 
+                <form method="POST" class="form-inline" style="padding-top: 10px">
+                <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index + 1 }}">
+                    <button class="btn btn-danger">Skip Riddle</button>
+                </form>
             </div>
             
             <!--RESULT-->
