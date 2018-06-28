@@ -2,6 +2,12 @@
 
 {% block content %}
 
-<h2 class="game-over">GAME OVER</h2>
+<div class="result">
+    <h2 class="display-result">{{ result }}</h2>
+    <a href="/">
+                <h1 class="title-riddle"> Play Again </h1>
+            </a>
+</div>
+
 
 {% endblock %}
