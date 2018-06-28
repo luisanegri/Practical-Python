@@ -1,6 +1,23 @@
-.title-riddle {
+.title-riddle{
     text-align: center;
-    
+}
+
+.title {
+    text-align: center;
+    padding: 30px;
+}
+
+#sub {
+    text-align: center;
+    font-size: 20px;
+}
+
+.container-centered {
+    padding-top: 150px;
+}
+
+.cont {
+    padding-top: 100px;
 }
 
 body {
