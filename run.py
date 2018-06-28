@@ -46,7 +46,6 @@ def user_game(username):
     riddle_index = 0
     # Score starting at 0
     score = user_data.get(username, 0)
-    wrong = ''
     points = ''
     result = ''
 
@@ -59,7 +58,7 @@ def user_game(username):
 
         if data[riddle_index]["answer"] == user_answer:
             # Increment score
-            score += 2
+            score += 1
             # Add username/score to function
             store_user_score(username, score)
             # Go to next question
@@ -68,18 +67,16 @@ def user_game(username):
             points = "Points: {0}".format(score)
      
             if riddle_index >= total_questions:
-                result = "You got a total of {0} points".format(score)
+                result = "You got {0} correct out of {1}".format(score, total_questions)
                 return render_template("end.html", result=result)
                 
                 
         else:
-            score -= 1
             points = "Points: {0}".format(score)
 
     return render_template("game.html",
                             username=username, data=data, riddle_index=riddle_index,
-                            score=score, total_questions=total_questions, points=points,
-                            wrong=wrong)
+                            score=score, total_questions=total_questions, points=points)
 
 
 
