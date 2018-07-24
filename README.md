@@ -21,7 +21,6 @@ Demo: http://py-game.herokuapp.com/
 
 * Heroku
 
-## To do:
-- Be able to skip last riddle
+
 
 
