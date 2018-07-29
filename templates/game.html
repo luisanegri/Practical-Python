@@ -1,34 +1,32 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
+<div class="container cont">
+  <a href="/">
+    <h1 class="title-riddle"> Riddle Game </h1>
+  </a>
+  <h2 class="username"> Welcome, {{username}}!</h2>
+  <div class="data">
+  <!--QUESTION-->
+    <h3 class="riddle_index"> {{data[riddle_index]["question"]}} </h3>
+  </div>
+  <!--ANSWER-->
+  <div class="col-md-12 answer-riddle">
+    <form method="POST" class="form-inline">
+      <input type="text" class="form-control" placeholder="answer" name="response" id="response" autofocus>
+      <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index }}">
+      <button class="btn btn-danger">Send</button>
+    </form>
 
-        <div class="container cont">
-            <a href="/">
-                <h1 class="title-riddle"> Riddle Game </h1>
-            </a>
-            <h2 class="username"> Welcome, {{username}}!</h2>
-            <div class="data">
-            <!--QUESTION-->
-                <h3 class="riddle_index"> {{data[riddle_index]["question"]}} </h3>
-            </div>
-            <!--ANSWER-->
-            <div class="col-md-12 answer-riddle">
-                <form method="POST" class="form-inline">
-                    <input type="text" class="form-control" placeholder="answer" name="response" id="response" autofocus>
-                    <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index }}">
-                    <button class="btn btn-danger">Send</button>
-                </form>
-                
-                <form method="POST" class="form-inline" style="padding-top: 10px">
-                <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index + 1 }}">
-                    <button class="btn btn-danger">Skip Riddle</button>
-                </form>
-            </div>
-            
-            <!--RESULT-->
-            <div class="result">
-                <h2 class="display-result" id="user_score">{{ points }}</h2>
-            </div>
-         </div>
-               
+    <form method="POST" class="form-inline" style="padding-top: 10px">
+      <input type="hidden" name="riddle_index" id="riddle_index" value="{{ riddle_index + 1 }}">
+      <button class="btn btn-danger">Skip Riddle</button>
+    </form>
+  </div>
+
+  <!--RESULT-->
+  <div class="result">
+    <h2 class="display-result" id="user_score">{{ points }}</h2>
+  </div>
+</div>
+
 {% endblock %}
