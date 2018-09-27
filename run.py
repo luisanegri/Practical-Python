@@ -53,8 +53,8 @@ def user_game(username):
         user_answer = request.form.get("response", "").lower()
 
         if riddle_index >= total_questions:
-            result = "You got {0} correct out of {1}".format(score, 
-            total_questions)
+            result = "You got {0} correct out of {1}".format
+            (score, total_questions)
             return render_template("end.html", result=result)
 
         if data[riddle_index]["answer"] == user_answer:
@@ -67,11 +67,6 @@ def user_game(username):
             # Display message
             points = "Points: {0}".format(score)
 
-            if riddle_index >= total_questions:
-                result = "You got {0} correct out of {1}".format
-                (score, total_questions)
-                return render_template("end.html", user_data=user_data)
-
         else:
             points = "Points: {0}".format(score)
 
@@ -82,4 +77,4 @@ def user_game(username):
                             total_questions=total_questions, points=points)
 
 
-app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
+app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=False)
