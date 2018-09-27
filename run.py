@@ -53,8 +53,8 @@ def user_game(username):
         user_answer = request.form.get("response", "").lower()
 
         if riddle_index >= total_questions:
-            result = "You got {0} correct out of {1}".format
-            (score, total_questions)
+            result = "You got {0} correct out of {1}".format(
+                                                        score, total_questions)
             return render_template("end.html", result=result)
 
         if data[riddle_index]["answer"] == user_answer:
