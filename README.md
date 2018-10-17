@@ -3,32 +3,49 @@ Demo: http://py-game.herokuapp.com/
 
 ## Overview
 
-> Riddle game created in Python. 
+> This logic-driven web application created in Python is a riddle game that will generate 10 riddles to be unraveled.
 
+## UX
 
-## Features
+This game was created for people who enjoy to exercise their minds through challenges but also enjoy having some fun!
 
 * Users are identified by a unique username (without authentication)
-* Multiple users can play at the same time
 * To each correct answer 1 point is added, the next question is displayed and the score is printed on the screen 
 * To each incorrect answer no point is added and the user can try it again
 * The players have the choice to skip a question
 * The result is displayed during the game and in the end
-
+* Multiple users can play at the same time
 
 ## Technologies Used
 
 * HTML
 * CSS
 * Bootstrap
+        - to give a responsive design 
 * Python
+        - to build the game's logic
 * Flask
+        - as a webframework for Python
 
 ## Testing
 
-The game's logic was tested manually by comparing the logic applied and the effect achieved.
-The capability of having multiple players using the app at the same time in different browsers was also tested.
+The game's logic was tested manually by comparing the logic applied and the effect achieved
 
+1. Choosing an username
+- If the form is not filled out the game does not start (Passed)
+
+2. Riddles
+- Each time the user gives the correct answer the next riddle is loaded. (Passed)
+
+4. Skip riddle
+- Every time the user skips the riddle, the next riddle is loaded
+
+3. Scoring
+- Each time the user answers correctly, 1 point is added to the user's score. (Passed)
+- Each time the user answers incorrectly, the user does not get any point. (Passed)
+- The points are accumulated throughout the game. (Passed)
+
+The capability of having multiple players using the app at the same time in different browsers was also tested.
 
 ## Deployment
 
