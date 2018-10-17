@@ -32,18 +32,18 @@ This game was created for people who enjoy to exercise their minds through chall
 The game's logic was tested manually by comparing the logic applied and the effect achieved
 
 1. Choosing an username
--If the form is not filled out the game does not start. :heavy_check_mark:
+- If the form is not filled out the game does not start. :heavy_check_mark:
 
 2. Riddles
--Each time the user gives the correct answer the next riddle is loaded. :heavy_check_mark:
+- Each time the user gives the correct answer the next riddle is loaded. :heavy_check_mark:
 
 4. Skip riddle
--Every time the user skips the riddle, the next riddle is loaded. :heavy_check_mark:
+- Every time the user skips the riddle, the next riddle is loaded. :heavy_check_mark:
 
 3. Scoring
--Each time the user answers correctly, 1 point is added to the user's score. :heavy_check_mark:
--Each time the user answers incorrectly, the user does not get any point. :heavy_check_mark:
--The points are accumulated throughout the game. :heavy_check_mark:
+- Each time the user answers correctly, 1 point is added to the user's score. :heavy_check_mark:
+- Each time the user answers incorrectly, the user does not get any point. :heavy_check_mark:
+- The points are accumulated throughout the game. :heavy_check_mark:
 
 
 The capability of having multiple players using the app at the same time in different browsers was also tested.
