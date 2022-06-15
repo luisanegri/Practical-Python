@@ -5,8 +5,6 @@ Demo: http://py-game.herokuapp.com/
 
 > This logic-driven web application created in Python is a riddle game that will generate 10 riddles to be unraveled.
 
-## UX
-
 This game was created for people who enjoy to exercise their minds through challenges but also enjoy having some fun!
 
 * Users are identified by a unique username (without authentication)
@@ -21,11 +19,8 @@ This game was created for people who enjoy to exercise their minds through chall
 * HTML
 * CSS
 * Bootstrap
-        - to give a responsive design 
 * Python
-        - to build the game's logic
 * Flask
-        - as a webframework for Python
 
 ## Testing
 
